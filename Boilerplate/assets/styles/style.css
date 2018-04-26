@@ -1,0 +1,406 @@
+body, h1, h2, h3, h4, a, p {
+	margin: 0;
+	font-family: "Trebuchet MS"
+
+}
+@font-face {
+	font-family:'Lato-Regular';
+	src:url(../fonts/Lato-Regular.ttf);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+img {
+	max-width: 100%;
+}
+.container {
+	width: 1024px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: flex-start ;
+}
+.choose-item {
+	background-color: #f4f0ef;
+	width: 200px;
+	border-radius: 4px;
+	padding: 20px; 
+	display: inline-block;
+	margin-right: 30px;
+}
+.item  {
+	opacity: 0.2;
+	font-size: 18px;
+	display: flex;
+	justify-content: flex-start;
+}
+.item-img {
+	margin: 0 20px 0 0;
+	height: 40px; 
+	transform: translateY(9px);
+
+}
+ul {
+	padding: 0;
+	line-height: 3;
+}
+.chooseOption {
+	list-style-type: none;
+}
+.select-item {
+	background-color: #f4f0ef;
+	width: 200px;
+	border-radius: 4px;
+	padding: 20px;
+	line-height: 1.9;
+
+}
+.items {
+	list-style-type: none;
+
+}
+.sofa {
+	margin-bottom: 25px;
+}
+.armchair {
+	margin-bottom: 10px;
+}
+.matrac {
+	margin-bottom: 10px;
+} 
+.carpet {
+	margin-bottom: 12px;
+}
+.chair {
+	margin-bottom: 25px;
+}
+.bean {
+	margin-bottom: 20px;
+}
+
+
+
+.xcalend{position:absolute;z-index:999;width:150px;line-height:1.2em;font-size:15px;text-align:center;background:#fff;border:2px solid #ddd}
+.xcalend td{cursor:pointer;padding:6px}
+.xcalend thead td{color:#333}
+.xcalend thead tr:last-child td{font-size:12px;background:#fff;color:#555;cursor:default}
+.xcalend tbody td{color:#025}
+.xcalend tfoot td{color:#333}
+.xcalend tbody td.tday{background:#eee;font-weight:bold}
+.xcalend tbody td:hover, .xcalend td:hover{background:#fff;color:#000}
+.xcalend tbody td:nth-child(n+6){color:#e78c5c}
+.xcalend .cal-first td:nth-last-child(-n+2){color:#e78c5c}
+.xcalend tbody td.today{background:#17a865;color:#fff;font-weight:thin}
+.xcalend tbody td.bold{font-weight:bold}
+.xcalend tbody td.cal-l b, .xcalend tbody td.cal-r b{display:none}
+.xcalend tbody td.cal-l:hover b, .xcalend tbody td.cal-r:hover b{display:inline}
+.xcalend a{text-decoration:none}
+.xcalend th a{color:#ccc;display:block;padding:5px 0}
+
+
+
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/* Custom default button */
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritence from `body` */
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+
+
+
+.ti_tx,
+.mi_tx,
+.mer_tx {
+	width: 100%;
+	text-align: center;
+	margin: 10px 0;
+}
+
+.time,
+.mins,
+.meridian {
+	width: 60px;
+	float: left;
+	margin: 0 10px;
+	font-size: 20px;
+	color: #2d2e2e;
+	font-family: arial;
+	font-weight: 700;
+}
+
+.prev,
+.next {
+	cursor: pointer;
+	padding: 18px;
+	width: 28%;
+	border: 1px solid #ccc;
+	margin: auto;
+	background: url(../images/arrow.png) no-repeat;
+	border-radius: 5px;
+}
+
+.prev:hover,
+.next:hover {
+	background-color: #ccc;
+}
+
+.next {
+	background-position: 50% 150%;
+}
+
+.prev {
+	background-position: 50% -50%;
+}
+
+.time_pick {
+	position: relative;
+}
+
+.timepicker_wrap {
+	padding: 10px;
+	border-radius: 5px;
+	z-index: 998;
+	display: none;
+	box-shadow: 2px 2px 5px 0 rgba(50,50,50,0.35);
+	background: #f6f6f6;
+	border: 1px solid #ccc;
+	float: left;
+	position: absolute;
+	top: 27px;
+	left: 0;
+}
+
+.arrow_top {
+	position: absolute;
+	top: -10px;
+	left: 20px;
+	background: url(../images/top_arr.png) no-repeat;
+	width: 18px;
+	height: 10px;
+	z-index: 999;
+}
+input.timepicki-input {
+	background: none repeat scroll 0 0 #FFFFFF;
+    	border: 1px solid #CCCCCC;
+    	border-radius: 5px 5px 5px 5px;
+    	float: none;
+    	margin: 0;
+    	text-align: center;
+    	width: 70%;
+}
+a.reset_time {
+	float: left;
+	margin-top: 5px;
+	color: #000;
+}
+
+.quantity {
+	width: 100px;
+	height: 503px;
+	background-color: #f4f0ef;
+	padding-left: 20px;
+	margin-left: 20px;
+	padding-top: 25px;
+	margin-right: 20px;
+
+}
+.quantity-end {
+	display: flex;
+	justify-content: flex-start;
+	padding-left: 5px;
+
+}
+.quantity-begin {
+ display: block;
+}
+.date-picker {
+	background-color: #fff;
+	width: 125px;
+	height: 50px;
+	text-align: center;
+	padding-top: 6px;
+	font-family: "Lato-Regular";
+	text-transform: uppercase;
+	font-size: 13px;
+	color: #17a865;
+	border: 1px solid #18a765;
+	border-radius: 4px;
+	margin-right: 10px;
+	margin-left: 30px;
+
+
+}
+.pickUrDate {
+	width: 125px;
+	height: 50px;
+	background-color: #fff;
+	padding-top: 15px;
+	color: #18a765;
+	border: 1px solid #18a765;
+	border-radius: 4px;
+	text-align: center;
+	font-family: "Lato-Regular";
+
+}
+.cleaning {
+	width: 350px;
+	background-color: #f4f0ef;
+	height: 300px;
+	padding-top: 25px;
+	margin-bottom: 10px;
+
+}
+.placement {
+	width: 260px;
+	padding-bottom: 70px;
+	border-radius: 4px;
+	border: 1px solid #18a765;
+	margin-left: 30px;
+	margin-bottom: 20px;
+
+}
+.pickers {
+	display: flex;
+	justify-content: flex-start;
+	margin-bottom: 20px;
+}
+input:active, input:hover, input:focus {
+    outline: 0;
+    outline-offset: 0;
+}
+.phone-number,
+.e-mail {
+	border: 1px solid  #17a865;
+	border-radius: 4px;
+	margin-left: 30px;
+	margin-bottom: 20px;
+}
+.right-arrow,
+.back-arrow {
+	width: 16px;
+	height: 16px;
+}
+.choose-number {
+	display: flex;
+	justify-content: flex-start;
+}
+.p-quantity {
+	margin-bottom: 40px;
+	margin-left: -14px;
+}
+.quantity-begin {
+	margin-bottom: 40px;
+}
+.number {
+	margin: 0 5px;
+}
+.result {
+	width: 350px;
+	height: 190px;
+	background-color: #18a765; 
+	border-radius: 4px;
+	padding:  40px 50px;
+}
+.p-price {
+	font-weight: 100;
+	font-family:"Lato-Regular";
+	font-size: 20px;	
+	color: #fff;
+	padding-bottom: 25px;
+
+}
+.p-sale {
+	font-weight: 100;
+	font-family:"Lato-Regular";
+	font-size: 20px;	
+	color: #fff;
+	margin-bottom: 15px;
+
+}
+span {
+	font-weight: 100;
+	font-size: 16px;
+}
+.btn {
+	width: 240px;
+	height: 40px;
+	text-decoration: none;
+	font-weight: 600px;
+	color: black;
+	background-color: white;
+	border-radius: 5px;
+	text-align: center;
+	padding: 10px 0 20px 0;
+	outline: 0;
+    font-family: "Trebuchet MS"
+}
+.timeDateCleaning {
+	margin-left: 30px;
+	margin-bottom: 10px;
+}
+.price-images {
+	width: 30px;
+	display: inline-block;
+	height: 30px;
+	margin-right: 10px;
+	/*transform: translateY(3px);
+*/}
+.last-flex-block {
+	display: flex;
+	justify-content: flex-start;
+}
+select {
+	border-radius: 3px;
+	border-color: #18a765;
+}
+
+.radio-buttons {
+	display: none;
+
+}
+
+.-active {
+	color: #18a765;
+}
+.green-image
+ {
+ display: none;
+} 
+.-green-image-block {
+	display: block;
+}
+
+.item-img-none {
+	display: none;
+}
+.guide {
+	width: 920px;
+	background-color: #f4f0ef;
+	font-family: "Trebuchet MS";
+	margin-left: 415px;
+	margin-top: 20px;
+	border-radius: 4px;
+	padding-bottom: 10px;
+}
+h1 {
+	margin-bottom: 10px;
+}
+.guide-p {
+	margin-bottom: 10px;
+}
